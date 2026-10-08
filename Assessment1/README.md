@@ -4,6 +4,9 @@ MapleFreight Logistics moves about 8,000 shipments a week across Ontario, Quebec
 
 On-time performance has dropped from 94% to 88% this year, and we only learn a shipment is late when the customer calls.
 
+AI Use:
+Claude was used to help organize the columns and weigh decisions on which features to keep. 
+
 Problem statement
 
 You are a Data Scientist at MapleFreight. Delays are currently found only after the delivery window has passed, which means paid-out service credits, expedited re-deliveries and complaints that reach the account manager before dispatch knows anything is wrong.
