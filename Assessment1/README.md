@@ -1,4 +1,32 @@
+I initially used Logisitc Regression and Random Forest,
+
+
+I was able to keep most outlier values due to the delivery times being legitimately high due to delays.
+
+I had to normalize the weight though since the range of the values were too far apart.
+
+Winsorizing the train data by capping outliers where I can keep the rows so I do not lose information. I want to keep the sign that the number is an outlier but be able to run it with Logistic Regression.
+
+I found the values to be personally not as satisfactory with the following values:
+
+| Model               | Precision | Recall   | F1       |
+| ------------------- | --------- | -------- | -------- |
+| Logistic Regression | 0.431235  | 0.748988 | 0.547337 |
+| Random Forest       | 0.880000  | 0.089069 | 0.161765 |
+
+Logistic Regression:
+
+The baseline model achieved a recall of 75% for late shipments, meaning it identified approximately 75% of shipments that were actually late. However, its precision was only 43%, indicating a high number of false positive alerts.
+
+I will be choosing the Logistic Regression since we can have a threshold of 70%, for this as we can afford around 43% of false alarms. Although as the business scales, the model needs to be retrained since scaling this as more deliveries are happening in the thousands will cause alert fatigue and might drive the monitoring down.
+
+If its possible, the threshold might benefit from different service tiers where the thresehold is much tighter on more expensive tiers.
+
+
+
+
 Context
+
 
 MapleFreight Logistics moves about 8,000 shipments a week across Ontario, Quebec and the Prairies. Its contracts carry on-time guarantees, so every late delivery costs service credits and re-delivery charges.
 
